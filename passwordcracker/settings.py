@@ -123,7 +123,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'static/'
 
 STATICFILES_DIRS = [
-    ("downloads", "/static"),
+    ("downloads", "static"),
 ]
 
 STORAGES = {
