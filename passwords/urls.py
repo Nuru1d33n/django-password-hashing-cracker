@@ -1,8 +1,8 @@
 from django.urls import path
-from passwords import views
+from .views import home, convert_passwords, identify_hash
 
 urlpatterns = [
-    path('', views.home, name='home')
+    path('', home, name='home'),
+    path('convert/', convert_passwords, name='convert_passwords'),
+    path('identify-hash/', identify_hash, name='identify_hash'),
 ]
-
-
