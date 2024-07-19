@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-^vv2)%0c@alq*j-0+6l-z1$9+vxu(dmn2!is++=w!_zh6*$$s7
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 
-ALLOWED_HOSTS = ['*.onrender.com', 'localhost', '127.0.0.1', 'django-password-hashing-cracker.onrender.com']
+ALLOWED_HOSTS = ['*.onrender.com', 'localhost', '127.0.0.1', 'django-password-hashing-cracker.onrender.com', '*.cybexplore.org', 'crackhash.cybexplore.org']
 
 
 # Application definition
