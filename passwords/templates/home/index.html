@@ -5,20 +5,37 @@
 
 {% block content %}
 <div class='container'>
-    <h1>Upload Passwords</h1>
+    <h1>Enter Passwords and Hashes</h1>
+
+    <!-- Display error message -->
+    {% if error_message %}
+        <div style="color: red;">
+            <strong>{{ error_message }}</strong>
+        </div>
+    {% endif %}
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {% bootstrap_form form layout='inline' %}
         <button type="submit">Submit</button>
     </form>
+
+    {% comment %} <form method="post">
+        {% csrf_token %}
+        {{ hash_form.as_p }}
+        <button type="submit">Submit Hash</button>
+    </form> {% endcomment %}
     
     
-    <h2>Saved Passwords</h2>
-    <ul>
-        {% for password in passwords %}
-            <li>{{ password }}</li>
-        {% endfor %}
-    </ul>
+
+    <!-- Display entered passwords -->
+    {% if passwords %}
+        <h2>Entered Passwords</h2>
+        <ul>
+            {% for password in passwords %}
+                <li>{{ password }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     
     <a href="{% url 'convert_passwords' %}">Update Hashes</a>
     
