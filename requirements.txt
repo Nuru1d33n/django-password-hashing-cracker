@@ -6,6 +6,8 @@ cffi==1.16.0
 dj-database-url==2.2.0
 Django==4.2.14
 django-bootstrap-v5==1.0.11
+gunicorn==22.0.0
+packaging==24.1
 pycparser==2.22
 soupsieve==2.5
 sqlparse==0.5.1
